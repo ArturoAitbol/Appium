@@ -25,7 +25,13 @@ jobs:
       with:
         java-version: '8'
         distribution: 'temurin'
-        cache: maven
+
+    - name: Set environment variables
+      run: |
+        export PATH="$PATH:$ANDROID_HOME/emulator"
+        export PATH="$PATH:$ANDROID_HOME/platform-tools"
+        export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
+
   # Debug (ssh into running host)
     - name: Debug on failure
       if: success()
