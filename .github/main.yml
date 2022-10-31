@@ -1,0 +1,23 @@
+
+name: Continuous testing in Integration
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  # schedule:
+  #   - cron: '0 * * * *'
+
+permissions: write-all
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+  # Debug (ssh into running host)
+    - name: Debug on failure
+      if: failure()
+      uses: mxschmitt/action-tmate@v3
