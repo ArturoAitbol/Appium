@@ -27,6 +27,7 @@ public class BaseTest {
 //        service.start();
         UiAutomator2Options options = new UiAutomator2Options();
         options.setDeviceName("Nexus");
+//        options.setDeviceName("420088406aca34b1");
 //        options.setDeviceName("Pixel_3a_API_33_x86_64");
 //        options.setApp("D:\\AITBOL\\Tekvizion\\Appium\\src\\test\\java\\resources\\ApiDemos-debug.apk");
         this.driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
