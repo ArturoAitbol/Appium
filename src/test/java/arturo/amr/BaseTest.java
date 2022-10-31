@@ -22,12 +22,13 @@ public class BaseTest {
 
     @BeforeClass
     public void configuration() throws MalformedURLException {
-        this.service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\Gustavo Saavedra\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-                .withIPAddress("127.0.0.1").usingPort(4723).build();
+/*        this.service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\Gustavo Saavedra\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+                .withIPAddress("127.0.0.1").usingPort(4723).build();*/
 //        service.start();
         UiAutomator2Options options = new UiAutomator2Options();
-        options.setDeviceName("Pixel_3a_API_33_x86_64");
-        options.setApp("D:\\AITBOL\\Tekvizion\\Appium\\src\\test\\java\\resources\\ApiDemos-debug.apk");
+        options.setDeviceName("Nexus");
+//        options.setDeviceName("Pixel_3a_API_33_x86_64");
+//        options.setApp("D:\\AITBOL\\Tekvizion\\Appium\\src\\test\\java\\resources\\ApiDemos-debug.apk");
         this.driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
         this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }

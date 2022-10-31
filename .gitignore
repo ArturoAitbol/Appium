@@ -1,0 +1,38 @@
+.angular
+node_modules
+dist
+.idea
+.class
+*.class
+*/target/*
+*/.classpath
+*/.project
+*/.settings/*
+.project
+*.prefs
+.vscode
+azure-functions/logs/logger.*
+.DS_Store
+target/
+*.png
+
+# Ignore test reports
+ui/coverage
+coverage/*
+azure-functions/coverage/*
+ui/fe-coverage/*
+ui/test-results
+
+# Ignore Gradle project-specific cache directory
+tests/ui/.gradle/
+tests/ui/build
+tests/ui/bin
+tests/ui/reports/
+tests/ui/gradle/wrapper/*.jar
+.gradle/
+tests/ui/src/main/resources/local.properties
+tests/ui/src/main/resources/integration.properties
+tests/ui/src/main/resources/production.properties
+tests/ui/bin/main/local.properties
+# tests/ui/src/test/java/acp/runner/RunCucumberTests.java
+auto-test.log
