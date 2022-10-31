@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="All Test Suite" duration-ms="34175" started-at="2022-10-27T13:37:37Z" finished-at="2022-10-27T13:38:12Z">
+    <groups>
+    </groups>
+    <test name="WifiTest" duration-ms="16200" started-at="2022-10-27T13:37:37Z" finished-at="2022-10-27T13:37:54Z">
+      <class name="arturo.amr.AppiumBasics">
+        <test-method status="PASS" signature="configuration()[pri:0, instance:arturo.amr.AppiumBasics@29ee9faa]" name="configuration" is-config="true" duration-ms="7335" started-at="2022-10-27T13:37:37Z" finished-at="2022-10-27T13:37:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configuration -->
+        <test-method status="PASS" signature="WifiSettingsName()[pri:0, instance:arturo.amr.AppiumBasics@29ee9faa]" name="WifiSettingsName" duration-ms="8393" started-at="2022-10-27T13:37:45Z" finished-at="2022-10-27T13:37:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WifiSettingsName -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:arturo.amr.AppiumBasics@29ee9faa]" name="tearDown" is-config="true" duration-ms="458" started-at="2022-10-27T13:37:53Z" finished-at="2022-10-27T13:37:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- arturo.amr.AppiumBasics -->
+    </test> <!-- WifiTest -->
+    <test name="LongPress" duration-ms="17963" started-at="2022-10-27T13:37:54Z" finished-at="2022-10-27T13:38:12Z">
+      <class name="arturo.amr.LongPress">
+        <test-method status="PASS" signature="configuration()[pri:0, instance:arturo.amr.LongPress@42d80b78]" name="configuration" is-config="true" duration-ms="7185" started-at="2022-10-27T13:37:54Z" finished-at="2022-10-27T13:38:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configuration -->
+        <test-method status="PASS" signature="LongPressGesture()[pri:0, instance:arturo.amr.LongPress@42d80b78]" name="LongPressGesture" duration-ms="10395" started-at="2022-10-27T13:38:01Z" finished-at="2022-10-27T13:38:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LongPressGesture -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:arturo.amr.LongPress@42d80b78]" name="tearDown" is-config="true" duration-ms="381" started-at="2022-10-27T13:38:11Z" finished-at="2022-10-27T13:38:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- arturo.amr.LongPress -->
+    </test> <!-- LongPress -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
