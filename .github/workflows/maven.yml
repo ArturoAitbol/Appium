@@ -28,5 +28,5 @@ jobs:
         cache: maven
   # Debug (ssh into running host)
     - name: Debug on failure
-      if: failure()
+      if: success()
       uses: mxschmitt/action-tmate@v3
