@@ -60,6 +60,13 @@ jobs:
           disable-animations: true
           script: mvn test -PRegression
 
+      - uses: actions/upload-artifact@v3
+      if: success()
+      name: Archive test results
+      with:
+        name: result
+        path: myImage.jpg
+
   # Debug (ssh into running host)
       - name: Debug on failure
         if: success() || failure()
