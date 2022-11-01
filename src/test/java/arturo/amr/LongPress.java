@@ -22,8 +22,14 @@ import java.util.Base64;
 public class LongPress extends BaseTest{
     @Test
     public void LongPressGesture() throws IOException, InterruptedException {
-        driver.findElement(AppiumBy.accessibilityId("Views")).click();
-        takeScreenshot(this.driver);
+        try {
+            driver.findElement(AppiumBy.accessibilityId("Views")).click();
+        }
+        catch (Exception exception){
+            takeScreenshot();
+            System.out.println(exception.getMessage());
+            exception.printStackTrace();
+        }
         /*driver.findElement(By.xpath("//android.widget.TextView[@content-desc='Expandable Lists']")).click();
         driver.findElement(AppiumBy.accessibilityId("1. Custom Adapter")).click();
         WebElement element = driver.findElement(By.xpath("//android.widget.TextView[@text='People Names']"));
@@ -34,7 +40,7 @@ public class LongPress extends BaseTest{
         Thread.sleep(2000);*/
     }
 
-    public void takeScreenshot(AppiumDriver driver) throws IOException {
+    public void takeScreenshot() throws IOException {
         String screenshotBase64 = driver.getScreenshotAs(OutputType.BASE64);
         String replaceBase64 = screenshotBase64.replaceAll("\n","");
         byte[] decodedImg = Base64.getDecoder()
