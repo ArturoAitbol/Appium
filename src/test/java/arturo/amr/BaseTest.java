@@ -22,9 +22,9 @@ public class BaseTest {
 
     @BeforeClass
     public void configuration() throws MalformedURLException {
-/*        this.service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\Gustavo Saavedra\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-                .withIPAddress("127.0.0.1").usingPort(4723).build();*/
-//        service.start();
+        this.service = new AppiumServiceBuilder().withAppiumJS(new File("main.js"))
+                .withIPAddress("127.0.0.1").usingPort(4723).build();
+        service.start();
         UiAutomator2Options options = new UiAutomator2Options();
         options.setDeviceName("Nexus");
 //        options.setDeviceName("420088406aca34b1");
