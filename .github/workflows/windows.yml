@@ -12,8 +12,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  build:
     runs-on: macos-latest
+    
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -47,7 +48,7 @@ jobs:
           target: google_api
           arch: x86_64
           profile: Nexus 5
-          
+          avd-name: Nexus
           force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
