@@ -12,8 +12,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  test:
+    runs-on: macos-latest
     
     steps:
       - name: checkout
@@ -55,6 +55,6 @@ jobs:
           script: appium & mvn test -PRegression
 
   # Debug (ssh into running host)
-    - name: Debug on failure
-      if: success() || failure()
-      uses: mxschmitt/action-tmate@v3
+      - name: Debug on failure
+        if: success() || failure()
+        uses: mxschmitt/action-tmate@v3
