@@ -6,11 +6,10 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: Java CI with Windows
 
 on:
-  push:
-    branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
   build:
