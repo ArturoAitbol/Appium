@@ -22,7 +22,7 @@ public class BaseTest {
 
     @BeforeClass
     public void configuration() throws MalformedURLException {
-        this.service = new AppiumServiceBuilder().withAppiumJS(new File("main.js"))
+        this.service = new AppiumServiceBuilder().withAppiumJS(new File("/usr/local/lib/node_modules/appium/build/lib/main.js"))
                 .withIPAddress("127.0.0.1").usingPort(4723).build();
         service.start();
         UiAutomator2Options options = new UiAutomator2Options();
