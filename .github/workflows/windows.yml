@@ -68,6 +68,6 @@ jobs:
           path: myImage.jpg
 
   # Debug (ssh into running host)
-      - name: Debug on failure
-        if: success() || failure()
-        uses: mxschmitt/action-tmate@v3
+      # - name: Debug on failure
+      #   if: success() || failure()
+      #   uses: mxschmitt/action-tmate@v3
