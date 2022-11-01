@@ -45,6 +45,7 @@ jobs:
         run: |
           npm install -g appium@next
           appium driver install uiautomator2
+          appium &
 
       - name: Run tests
         uses: reactivecircus/android-emulator-runner@v2
@@ -57,7 +58,7 @@ jobs:
           force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
-          script: appium & mvn test -PRegression
+          script: mvn test -PRegression
 
   # Debug (ssh into running host)
       - name: Debug on failure
