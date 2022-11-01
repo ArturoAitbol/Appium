@@ -1,5 +1,0 @@
-# Created at 2022-10-27T09:37:37.323
-Boot Manifest-JAR contains absolute paths in classpath 'D:\AITBOL\Tekvizion\Appium\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-'other' has different root
-

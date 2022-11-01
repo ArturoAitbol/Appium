@@ -26,7 +26,7 @@ public class BaseTest {
                 .withIPAddress("127.0.0.1").usingPort(4723).build();
         service.start();
         UiAutomator2Options options = new UiAutomator2Options();
-        options.setDeviceName("test");
+        options.setDeviceName("Nexus2");
         options.setUdid("emulator-5554");
 //        options.setDeviceName("420088406aca34b1");
 //        options.setDeviceName("Pixel_3a_API_33_x86_64");

@@ -23,7 +23,8 @@ public class LongPress extends BaseTest{
     @Test
     public void LongPressGesture() throws IOException, InterruptedException {
         try {
-            driver.findElement(AppiumBy.accessibilityId("Gallery")).click();
+            driver.findElement(AppiumBy.accessibilityId("Messages")).click();
+            Thread.sleep(2000);
 //            driver.findElement(AppiumBy.accessibilityId("Views")).click();
             takeScreenshot();
         }
