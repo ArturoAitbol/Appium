@@ -22,8 +22,8 @@ import java.util.Base64;
 public class LongPress extends BaseTest{
     @Test
     public void LongPressGesture() throws IOException, InterruptedException {
-        takeScreenshot(this.driver);
         driver.findElement(AppiumBy.accessibilityId("Views")).click();
+        takeScreenshot(this.driver);
         /*driver.findElement(By.xpath("//android.widget.TextView[@content-desc='Expandable Lists']")).click();
         driver.findElement(AppiumBy.accessibilityId("1. Custom Adapter")).click();
         WebElement element = driver.findElement(By.xpath("//android.widget.TextView[@text='People Names']"));
