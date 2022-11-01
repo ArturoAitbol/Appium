@@ -29,7 +29,15 @@ public class BaseTest {
         options.setDeviceName("Nexus");
 //        options.setDeviceName("420088406aca34b1");
 //        options.setDeviceName("Pixel_3a_API_33_x86_64");
-//        options.setApp("D:\\AITBOL\\Tekvizion\\Appium\\src\\test\\java\\resources\\ApiDemos-debug.apk");
+        String path = System.getProperty("user.dir");
+        String os = System.getProperty("os.name").toLowerCase();
+        if(os.contains("win"))
+            path =  path + "\\src\\test\\java\\resources\\ApiDemos-debug.apk";
+        else if (os.contains("nix") || os.contains("nux") || os.contains("aix"))
+            path =  path + "/src/test/java/resources/ApiDemos-debug.apk";
+        else if (os.contains("mac"))
+            path =  path + "/src/test/java/resources/ApiDemos-debug.apk";
+        options.setApp(path);
         this.driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
         this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
