@@ -37,7 +37,7 @@ public class BaseTest {
             path =  path + "/src/test/java/resources/ApiDemos-debug.apk";
         else if (os.contains("mac"))
             path =  path + "/src/test/java/resources/ApiDemos-debug.apk";
-        options.setApp(path);
+//        options.setApp(path);
         this.driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
         this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
