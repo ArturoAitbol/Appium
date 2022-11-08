@@ -22,14 +22,19 @@ public class BaseTest {
 
     @BeforeClass
     public void configuration() throws MalformedURLException {
-        this.service = new AppiumServiceBuilder().withAppiumJS(new File("/usr/local/lib/node_modules/appium/build/lib/main.js"))
+        /*this.service = new AppiumServiceBuilder().withAppiumJS(new File("/usr/local/lib/node_modules/appium/build/lib/main.js"))
                 .withIPAddress("127.0.0.1").usingPort(4723).build();
-        service.start();
+        service.start();*/
         UiAutomator2Options options = new UiAutomator2Options();
-        options.setDeviceName("Nexus2");
-        options.setUdid("emulator-5554");
-//        options.setDeviceName("420088406aca34b1");
-//        options.setDeviceName("Pixel_3a_API_33_x86_64");
+//        options.setDeviceName("Nexus2");
+//        options.setUdid("emulator-5554");
+        options.setDeviceName("420088406aca34b1");
+        options.setApp(getAppPath());
+        this.driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
+        this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    }
+
+    public String getAppPath(){
         String path = System.getProperty("user.dir");
         String os = System.getProperty("os.name").toLowerCase();
         if(os.contains("win"))
@@ -38,15 +43,21 @@ public class BaseTest {
             path =  path + "/src/test/java/resources/ApiDemos-debug.apk";
         else if (os.contains("mac"))
             path =  path + "/src/test/java/resources/ApiDemos-debug.apk";
-        options.setApp(path);
-        this.driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
-        this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        return path;
     }
 
     public void longPress(WebElement element){
         ((JavascriptExecutor)driver).executeScript("mobile: longClickGesture", ImmutableMap.of(
                 "elementId", ((RemoteWebElement)element).getId(),
                 "duration", 2000));
+    }
+
+    public void swipeAction(WebElement element, String direction){
+        ((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
+                "elementId", ((RemoteWebElement)element).getId(),
+                "direction", direction,
+                "percent", 0.75
+        ));
     }
 
     @AfterClass
